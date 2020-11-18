@@ -71,3 +71,61 @@ img {
 .clear {
   clear: both;
 }
+
+
+@media screen and (max-width: 420px) {
+  /* imposto il 100% alle row, azzerando poi i margini */
+  .row {
+    width: 100%;
+    margin: 0;
+  }
+
+/* imposto width 100% ai float */
+  #lezioni .row>.left,
+  #lezioni .row>.right,
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right {
+    width: 100%;
+    float: left;
+  }
+
+  /* imposto un margin-top alle immagini del blocco lezioni ed ai tre contenitori dei blocchi steps e why */
+  #lezioni .row img,
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right,
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    margin-top: 30px;
+  }
+
+  /* imposto un'altezza a tutte le img */
+  img {
+    height: 140px;
+  }
+
+  /* imposto un'altezza diversa per le immagini del blocco why */
+  #why .row img {
+    height: 80px
+  }
+
+  /* imposto un padding-top agli h1 dei blocchi why e steps */
+  #why .row h1,
+  #steps .row h1 {
+    padding-top: 20px
+  }
+
+  /* imposto un font-size 2em per gli h1 dei blocchi lezioni, steps e why */
+  #lezioni .row h1,
+  #steps .row h1,
+  #why .row h1 {
+    font-size: 2em
+  }
+
+  /* imposto un padding sx dx e bottom ai blocchi lezioni, steps e why */
+  #lezioni, #steps, #why {
+    padding: 0 30px 20px 30px
+  }
+}
