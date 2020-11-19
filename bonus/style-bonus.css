@@ -72,7 +72,7 @@ img {
   clear: both;
 }
 
-/* imposto le media query */
+/* imposto le media query per il mobile */
 @media screen and (max-width: 420px) {
 
   /* imposto il 100% alle row, azzerando poi i margini */
@@ -107,10 +107,6 @@ img {
     height: 140px;
   }
 
-  #lezioni .right img {
-    width: 150px
-  }
-  
   /* imposto un'altezza diversa per le immagini del blocco why */
   #why .row img {
     height: 80px
@@ -134,3 +130,75 @@ img {
     padding: 0 30px 20px 30px
   }
 }
+/* /imposto le media query per il mobile */
+
+
+/* imposto le media query per il tablet */
+@media screen and (min-width: 421px) and (max-width: 768px) {
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right,
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    width: 100%;
+  }
+
+  /* reimposto la width ed il margin-top delle row */
+  .row {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  /* imposto un'altezza fissa alle img */
+  img {
+    height: 150px
+  }
+
+  /* imposto un padding agli h1 delle row */
+  .row h1 {
+    padding-top: 20px
+  }
+
+  /* imposto un padding dx sx e bottom ai div steps e why */
+  #steps, #why {
+    padding: 0 30px 20px 30px
+  }
+
+  /* imposto un padding-bottom ai div left e central del div steps */
+  #steps .left,
+  #steps .central {
+    padding-bottom: 20px
+  }
+
+  /* imposto un'altezza diversa alle img del div why */
+  #why img {
+    height: 90px;
+  }
+
+  /* imposto una width al div right del div lezioni togliendo i px dei margin */
+  #lezioni .row>.right {
+    width: calc(50% - 10px);
+  }
+
+  /* imposto una width al div left del div lezioni togliendo i px dei margin */
+  #lezioni .row>.left {
+    width: calc(50% - 10px);
+  }
+
+  /* imposto un margin-left al div right del div lezioni */
+  #lezioni .row>.right {
+    margin-left: 10px
+  }
+
+  /* imposto un margin-right al div left del div lezioni */
+  #lezioni .row>.left {
+    margin-right: 10px
+  }
+
+  /* imposto una width diversa alla img del div right del div lezioni */
+  #lezioni .right img {
+    width: 150px
+  }
+}
+/* /imposto le media query per il tablet */
